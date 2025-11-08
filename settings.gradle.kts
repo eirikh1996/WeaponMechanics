@@ -14,6 +14,7 @@ dependencyResolutionManagement {
     //repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         mavenCentral()
+        mavenLocal()
         maven(url = "https://central.sonatype.com/repository/maven-snapshots/") // MechanicsCore Snapshots
         maven(url = "https://hub.spigotmc.org/nexus/content/repositories/snapshots/") // Spigot API
         maven(url = "https://s01.oss.sonatype.org/content/repositories/snapshots/") // Adventure Snapshots
@@ -36,3 +37,5 @@ file("./weaponmechanics-platforms/paper").listFiles()?.filter { it.isDirectory }
     include(":$subProjectName")
     project(":$subProjectName").projectDir = subDir
 }
+
+include("weaponmechanics-platforms:paper:v1_21_R6")
